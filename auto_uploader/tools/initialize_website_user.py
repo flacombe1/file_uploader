@@ -33,6 +33,9 @@ class Website():
         # wait.until(EC.element_to_be_clickable((By.ID, "uploadbutton"))).click()
         time.sleep(1)
 
+    def logout(self):
+        driver.close()
+
         
 
 class User:
@@ -46,14 +49,14 @@ class User:
 
 
 if __name__ == "__main__":
+    ######can be safely deleted upon download, just for testing purposes###############
     try:
-        #can be safely deleted upon download, just for testing purposes
         import sys
         sys.path.append("E:/save/")
         from secret import secret
-        ####################################################
     except:
         pass
+    ##################################################################################
 
     chrome = Website("https://portal.nm911.org/", "Chrome")
     user_me_nm911 = User(secret.username, secret.password)
