@@ -1,1 +1,1 @@
-E:/auto_uploader/py_install/python.exe ./main.py
+%~dp0py_install/python.exe ./main.py
