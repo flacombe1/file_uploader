@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from secret import secret
 import time
 
 
@@ -47,6 +46,15 @@ class User:
 
 
 if __name__ == "__main__":
+    try:
+        #can be safely deleted upon download, just for testing purposes
+        import sys
+        sys.path.append("E:/save/")
+        from secret import secret
+        ####################################################
+    except:
+        pass
+
     chrome = Website("https://portal.nm911.org/", "Chrome")
     user_me_nm911 = User(secret.username, secret.password)
 

@@ -1,6 +1,13 @@
-from class_test import Website
-from class_test import User
-from secret import secret
+from tools import Website, User
+
+######can be safely deleted upon download, just for testing purposes#########
+try:
+    import sys
+    sys.path.append("E:/save/")
+    from secret import secret
+except:
+    pass
+###########
 
 #currently Chrome is the only option
 chrome = Website("https://portal.nm911.org/", "Chrome")
